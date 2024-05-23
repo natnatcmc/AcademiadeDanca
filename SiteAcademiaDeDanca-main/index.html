@@ -12,6 +12,7 @@
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <link rel="shortcut icon" href="assets/icons/iconAcademiaDeDanca.jpeg">
       <title>MF | Academia de dança</title>
+
     </head>
 
   <body>
@@ -27,10 +28,12 @@
           <div class = "caixa">
         <!--barra de navegacao--->
       <nav class="navegacao">
+  
               <a href = "sobrenos.html">Sobre-nós</a>
               <a href = "modalidades.html">Modalidades</a>
               <a href = "planosprecos.html">Planos e preços</a>
               <a href = "centraldeajuda.html">Central de ajuda</a>
+
       </nav>
        <!--fim da barra de navegacao--->
     </div>
@@ -138,12 +141,12 @@
         <form action="">
           <h1 class="bem-vindo">Bem vindo(a)</h1>
           <div class="input-box">
-          <input type="text" placeholder="Usuário" required>
+          <input type="text" placeholder="Usuário" id ="login" required>
           <i class='bx bxs-user'></i>
         </div>
 
         <div class="input-box">
-          <input type="text" placeholder="Senha" required>
+          <input type="text" placeholder="Senha" id="senha" required>
           <i class='bx bx-lock-alt'></i>
         </div>
 
@@ -155,7 +158,7 @@
           <a href="#">Esqueci minha senha</a>
         </div>
 
-          <button type="submit" class="btn">Login</button>
+          <button type="submit" class="btn" onclick="logar(); return false">Login</button>
 
         <div class="link-registro">
           <p>Não tem conta?
@@ -224,6 +227,25 @@
     </div>
     <p class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</p>
 </footer>
+
+
+<script>
+
+function logar() {
+var login = document.getElementById('login').value;
+var senha = document.getElementById('senha').value;
+
+if(login == "admin"  && senha == "admin"){
+location.href = "#";
+} else {
+  alert("Usuário/senha incorretos")
+}
+
+}
+
+
+</script>
+
 
     </body>
 

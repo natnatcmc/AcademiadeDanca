@@ -28,9 +28,12 @@
               <a href = "modalidades.html">Modalidades</a>
               <a href = "planosprecos.html">Planos e preços</a>
               <a href = "centraldeajuda.html">Central de ajuda</a>
-              <a href="index.html"><button class="btnLogin-popup">Login</button></a>
       </nav>
        <!--fim da barra de navegacao--->
+
+       <div class = "botao">
+        <a href="index.html"><button class="btnLogin-popup">Login</button></a>
+    </div>
 
           <!--fim da div caixa--->
     </header>
@@ -39,13 +42,15 @@
        <div class="form-container">
         <h1 class="textoajuda">Precisa de ajuda? Nos mande mensagem!</h1>
         <p>Se sinta avontade pra mandar nos mandar mensagens.</p>
-        <form action="">
+        <form action="https://api.staticforms.xyz/submit" method="POST">
+            <input type="hidden" name="accessKey" value="3cc1fc48-bc67-4f0b-92f9-9bb7f41ca135">
+
             <label for="">Nome</label><br>
-            <input type="text" placeholder="Seu nome aqui"><br>
+            <input type="text" name="name" placeholder="Seu nome aqui"><br>
             <label for="">E-mail</label><br>
-            <input type="email" placeholder="Seu e-mail aqui"><br>
+            <input type="email" name="email" placeholder="Seu e-mail aqui"><br>
             <label for="">Mensagem</label><br>
-            <textarea name="" id="" cols="30" rows="5" placeholder="Insira a mensagem aqui"></textarea><br>
+            <textarea name="message" id="" cols="30" rows="5" placeholder="Insira a mensagem aqui"></textarea><br>
             <button class="submit">Pronto</button>
         </form>
     </div>
